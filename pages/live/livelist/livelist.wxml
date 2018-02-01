@@ -1,0 +1,24 @@
+<!--livelist.wxml-->
+<!-- <wxs module="filters" src="../../../utils/filters.wxs"></wxs> -->
+<view class='livelist-wrap'>
+  <view class='livelist' wx:for='{{livelist}}' wx:key='' bindtap='toDetails' data-pid='{{item.pid}}'>
+    <view class='imgage-placehold'>
+      <image class='live-img' src='{{item.logoUrl}}'></image>
+      <text class='date living' wx:if='{{item.status == 2}}'>直播中</text>
+      <text class='date normal' wx:elif='{{item.status == 1}}'>{{item.startTimeText}}</text>
+      <text class='date passed' wx:else='{{item.status == 3}}'>往期</text>
+    </view>
+    <view class='title'>
+      <view class='col-flex-1'>
+        <text class='live-title'>{{item.name}}</text>
+        <text class='hostName'>{{item.hostName}} | {{item.startTimeYear}}</text>
+      </view>
+      <view class='live-on-status'>
+        <text class='live-view' wx:if='{{item.status == 2}}'>观看</text>
+        <text class='live-appointment' wx:elif='{{item.status == 1 && item.paid === 0}}'>预约</text>
+        <text class='live-booked' wx:elif='{{item.status == 1 && item.paid === 1}}'>已预约</text>
+        <text class='live-catch-up' wx:else='{{item.status == 3}}'>回看</text>
+      </view>
+    </view>
+  </view>
+</view>

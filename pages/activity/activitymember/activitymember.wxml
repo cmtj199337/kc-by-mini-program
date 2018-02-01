@@ -1,0 +1,9 @@
+<view class='activitymember'>
+  <view class='member-title'>报名（{{num}}）
+  </view>
+  <view class='member-list clearfix' wx:for='{{members}}' wx:key='' >
+   <image src='{{item.avatar}}' class='list-img fl'></image>
+    <text class='list-name fl'>{{item.fullName}}</text>
+    <text class='list-time fr'>{{item.timeText}}</text>
+  </view>
+</view>

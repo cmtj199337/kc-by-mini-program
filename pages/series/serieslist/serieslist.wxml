@@ -1,0 +1,17 @@
+<view class='wrap'>
+  <view class='article' wx:for="{{list}}" wx:key="">
+    <view class='article-content'  bindtap="intoDes" data-pid="{{item.pid}}">
+      <view class='article-content-left'>
+        <text class='article-title'>{{item.title}}</text>
+        <text class='article-tip'>{{item.articleCount}}课时     {{item.subscribeCount}}学习</text>
+        <view class='info'>
+          <image class='authorAvatar' src='{{item.authorAvatar}}'></image>
+          <text class='count'>  {{item.authorName}} • {{item.authorTitle}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="article-img">
+      <image class='avatar' src='{{item.logoUrl}}'></image>
+    </view>
+  </view>
+</view>

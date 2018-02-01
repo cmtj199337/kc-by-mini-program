@@ -1,0 +1,18 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<!-- <wxs module="filters" src="../../../utils/filters.wxs"></wxs> -->
+<view class="wrap">
+   <video class='video' src="{{currentUrl}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+  <view class="nav">
+    <view class="{{detail ? 'red' : 'default'}}" bindtap="detail"><text>详情</text></view>
+    <view class="{{list ? 'red' : 'default'}}" bindtap="list"><text>回看列表</text></view>
+  </view>
+  <view class="{{detail ? 'show' : 'hidden'}}">
+    <template is='wxParse' data='{{wxParseData: content.nodes}}' />
+  </view>
+  <view class="{{list ? 'show' : 'hidden'}}">
+    <view class='back-list' wx:for='{{backList}}' wx:key=''>
+      <image src="../../../images/form_video.png"></image>
+      <text class="live-list {{currentUrl ? 'current' : ''}}" bindtap='changePath' data-path='{{item.recordingFiles}}'>直播片段：{{item.startTimeText}} - {{item.endTimeText}}</text>
+    </view>
+  </view>
+</view>

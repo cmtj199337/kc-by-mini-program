@@ -1,0 +1,22 @@
+ <view class='activitylist'>
+   <view class='activity-item flex ' wx:for='{{datas}}' wx:key='' data-pid='{{item.pid}}' bindtap='intoDes'>
+       <view class='item-image'>
+        <image class='image-img' src='{{item.logoUrl}}'></image>
+        <view class='image-tag'>{{item.statusText}}</view>
+           <image class='tag-img' src='../../../images/tag-grey.png' wx:if='{{item.statusText=="往期"}}'></image>
+        <image class='tag-img' src='../../../images/tag-purple.png' wx:elif='{{item.statusText=="预告"}}'></image>
+        <image class='tag-img' src='../../../images/tag-red.png'wx:else ></image>
+
+        <view class='image-date'>{{item.startTimeText}}开始</view>
+       </view>
+        <view class='item-info col-flex-1'>
+          <view class='info-title nowrap-2'>{{item.title}}</view>
+           <text class='info-take'>已报名{{item.paidCount}}人</text>
+           <view class='info-city clearfix'>
+            <text class='city'>{{item.city}}</text>
+            <text class='price size-green1' wx:if='{{item.price ==0}}'>免费</text>
+            <text class='price red1 bolder' wx:else>￥{{item.price}}</text>
+           </view>
+        </view>
+   </view>
+</view>

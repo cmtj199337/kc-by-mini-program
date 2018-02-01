@@ -1,0 +1,57 @@
+<view class='wrap'>
+  <!-- 头像 -->
+  <view class='avator'>
+    <text>头像</text>
+    <image src="{{info.avatarUrl}}"></image>
+  </view>
+  <!-- 基本信息 -->
+  <view class='info'>
+    <view class='section'>
+      <text>昵称</text>  
+      <input placeholder="必填" value="{{user.nickName}}" bindinput="inputNickName"/>
+    </view>
+    <view class='section'>
+      <text>性别</text>  
+      <radio-group class="radio-group" bindchange="radioChange" size='mini'>
+        <label class="radio" wx:for="{{items}}" wx:key=''>
+          <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+    <view class='sectionPlus'>
+      <text>一句话介绍自己</text>  
+      <textarea class='trnc' placeholder="选填" value="{{user.intro}}" bindinput="inputIntro" maxlength='50' auto-height='true' />
+    </view>
+  </view>
+  <!-- 完善信息 -->
+  <view class='perfect'>
+    <view class='section'>
+      <text>真实姓名</text>  
+      <input placeholder="必填" bindinput="inputFullName" value='{{user.fullName}}'/>
+    </view>
+    <view class='section'>
+      <text>公司</text>  
+      <input placeholder="必填" bindinput="inputCompany" value='{{user.company}}'/>
+    </view>
+    <view class='section'>
+      <text>职位</text>  
+      <input placeholder="必填" bindinput="inputPosition" value='{{user.position}}'/>
+    </view>
+    <view class='section'>
+      <text>邮箱</text>  
+      <input placeholder="必填" bindinput="inputEmail" value='{{user.email}}'/>
+    </view>
+    <view class='section'>
+      <text>所在城市</text>  
+      <input placeholder="请输入所在城市" bindinput="inputCity" value='{{user.city}}'/>
+    </view>
+  </view>
+  <!-- 完善资料 -->
+  <view class='submit'>
+    <view class='section' value='{{user.email}}'>
+      <text>手机</text>
+      <text>{{user.mobile}}</text>
+    </view>
+    <button class='btn' bindtap='submit'>完善资料</button>
+  </view>
+</view>

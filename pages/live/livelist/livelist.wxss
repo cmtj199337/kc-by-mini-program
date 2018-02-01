@@ -1,0 +1,84 @@
+.livelist-wrap {
+  background: #f4f4f4;
+}
+.livelist {
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.imgage-placehold {
+  position: relative;
+}
+.live-img {
+  width: 100%;
+  height: 380rpx;
+  background: #f4f4f4;
+}
+.date {
+  position: absolute;
+  right: 0;
+  top: 50rpx;
+  font-size: 24rpx;
+  color: #fff;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  border-radius: 50rpx 0 0 50rpx;
+}
+.living {
+  background: #eb262c;
+}
+.normal {
+  background: #7b95cf;
+}
+.passed {
+  background: #90a6b7;
+}
+.title {
+  padding: 20rpx 30rpx;
+  display: -webkit-box;
+}
+.live-title {
+  font-size: 32rpx;
+  color: #333;
+  display: block;
+  height: 84rpx;
+}
+.col-flex-1 {
+  float: none;
+  -webkit-box-flex: 1;
+}
+.hostName {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 10rpx;
+  display: block;
+}
+.live-on-status {
+  line-height: 67px;
+}
+.live-on-status text {
+  display: inline-block;
+  width: 126rpx;
+  height: 50rpx;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.live-view{
+  border:1px solid #eb262c;
+  color:#eb262c;
+}
+.live-appointment {
+  border: 1px solid #7b95cf;
+  color: #7b95cf;
+  margin-left: 20rpx;
+}
+.live-booked{
+  border:1px solid #ccc;
+  color:#999;
+}
+.live-catch-up{
+  border:1px solid #90a6b7;
+  color:#90a6b7;
+}

@@ -1,0 +1,93 @@
+page {
+  height: 100%;
+}
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 0;
+  box-sizing: border-box;
+} 
+.auto-break {
+  word-break: break-word;
+}
+/**基本样式**/
+
+.nowrap-2 {
+  text-overflow: ellipsis;
+  word-break: normal;
+  word-wrap: break-word;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+}
+.isolution {
+  height: 20rpx;
+  background-color: #e5e5e5;
+  margin: 10rpx 0 10rpx 0;
+}
+.bolder{
+  font-weight: bold;
+}
+/** 公共颜色**/
+.red1 {
+  color: #ff5a5f;
+}
+.bg-red1{
+  background-color: #ff5a5f;
+}
+.bg-grey1{
+  background-color: #ccc;
+}
+.size-green1{
+ color: #2cc17b;
+}
+/**公共字体大小**/
+.grey1 {
+  color: #999;
+}
+/**公共边距**/
+.ml30{
+  margin-left: 30rpx;
+}
+
+/**公共布局**/
+.rich-content{
+  padding: 30rpx;
+  color: #333;
+font-size:32rpx;
+line-height:54rpx;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.flex {
+  display: flex;
+}
+.col-flex-1{
+  float: none;
+  width: 0;
+  -webkit-box-flex: 1;
+  //-webkit-flex:1;
+}
+.nowrap-2{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+
+
+@import './pages/components/praise/praise.wxss';

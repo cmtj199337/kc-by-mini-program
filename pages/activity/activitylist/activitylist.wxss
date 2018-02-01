@@ -1,0 +1,80 @@
+.activitylist{
+  width: 100%;
+  padding-left: 30rpx;
+      box-sizing: border-box;
+}
+.activity-item {
+  padding: 30rpx 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+.item-image{
+  position: relative;
+  width: 280rpx;
+  height: 182rpx;
+  margin-right: 15rpx;
+  background-color: #f4f4f4;
+}
+.image-img{
+  width: 100%;
+  height: 100%;
+}
+.image-tag{
+  position: absolute;
+  top: 0;
+  left: 0;
+    text-align: center;
+  height: 40rpx;
+  color: white;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  z-index: 10;
+  width: 88rpx;
+}
+.tag-img{
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100rpx;
+  height: 40rpx;
+  color: white;
+  font-size: 28rpx;
+  line-height: 38rpx;
+}
+.image-date{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: white;
+  background: linear-gradient(transparent,rgba(0,0,0,0.7));
+}
+
+
+
+
+
+.item-info{
+}
+.info-title{
+  height: 100rpx;
+  line-height: 55rpx;
+  font-size: 32rpx;
+  color:#333;
+}
+.info-take{
+  font-size: 24rpx;
+  color: #999;
+}
+.info-city{
+  font-size: 28rpx;
+}
+.city{
+  color: #999;
+  float: left;
+}
+.price{
+  float: right;
+  margin-right: 30rpx;
+}

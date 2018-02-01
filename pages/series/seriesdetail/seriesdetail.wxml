@@ -1,0 +1,34 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="wrap">
+  <image class='banner' src="{{info.logoUrl}}"></image>
+  <view class="nav">
+    <view class="{{list ? 'red' : 'default'}}" bindtap="list"><text>课时（{{artList.length}}）</text></view>
+    <view class="{{detail ? 'red' : 'default'}}" bindtap="detail"><text>详情</text></view>
+  </view>
+  <!--list  -->
+  <view class="{{list ? 'show' : 'hidden'}}">
+    <view class='art-list' wx:for='{{artList}}' wx:key='' bindtap='toArticle' data-pid='{{item.pid}}'>
+      <image src="../../../images/form_audio1.png" wx:if='{{item.type == 3}}'></image>
+      <image src="../../../images/form_video1.png" wx:elif='{{item.type == 2}}'></image>
+      <image src="../../../images/form_img1.png" wx:else></image>
+      <view class='contain'>
+        <text class="live-list {{currentUrl ? 'current' : ''}}" bindtap='changePath' data-path='{{item.recordingFiles}}'>{{item.title}}</text>
+        <text class='sup-info'>{{item.readCount}}人看过 | {{item.startTimeText}}</text>
+      </view>
+      <button class='btn' wx:if='{{item.publicity}}'>试看</button>
+    </view>
+    <button class='pay' bindtap='pay' disabled='{{payflag}}'>付费学习({{info.priceList[0].price}})</button>
+  </view>
+  <!--detail  -->
+  <view class="{{detail ? 'show' : 'hidden'}}">
+    <text class='title'>{{info.title}}</text>
+    <view class='author-info'>
+      <image class='authorAvatar' src='{{info.authorAvatar}}'></image>
+      <view class='info'>
+        <text class='authorName'>{{info.authorName}}</text>
+        <text class='authorTitle'>{{info.authorTitle}}</text>
+      </view>
+    </view>
+    <template is='wxParse' data='{{wxParseData: content.nodes}}' />
+  </view>
+</view>

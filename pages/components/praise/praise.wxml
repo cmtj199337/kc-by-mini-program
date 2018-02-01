@@ -1,0 +1,9 @@
+
+<view class='praise-wrap'>
+<view class="{{bPraise ? 'active':'normal'}} praise"  bindtap='setLike'>
+ <image src='../../../images/zan.png' class='praise-img' wx:if='{{!bPraise}}' />
+  <image src='../../../images/zan-active.png' class='praise-img' wx:else />
+  <text class='praise-text'>{{praiseCount}}</text>
+</view>
+
+</view>

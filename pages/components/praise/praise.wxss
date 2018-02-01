@@ -1,0 +1,27 @@
+.praise-wrap{
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+}
+.praise{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  border: 1px solid #999;
+  width: 260rpx;
+  border-radius: 50rpx;
+  color: #999;
+}
+.active {
+  border: 1px solid red;
+  color: red;
+}
+.praise-img {
+  width: 40rpx;
+  height: 40rpx;
+}
+.praise-text {
+  font-size: 40rpx;
+  margin-left: 10rpx;
+}
+

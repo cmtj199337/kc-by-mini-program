@@ -1,0 +1,36 @@
+<!--home.wxml-->
+<view class="find">
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{active}}">
+    <block wx:for="{{swipers}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item.logoUrl}}" class="slide-image" width="375"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='icon-menu'>
+    <view class="menu-view" wx:for="{{menuList}}" wx:key="" bindtap='intoModels' data-type="{{item.type}}">
+      <image src="{{item.icon}}" mode="widthFix" class='icon-img'></image>
+      <text class='icon-text'>{{item.text}}</text>
+    </view>
+  </view>
+  <view class='recommend'>小编推荐<text class='more'>更多</text><image class='arrows' src='../../images/arrows_right.png'></image></view>
+  <view class='article' wx:for="{{recommends}}" wx:key="">
+    <view class='article-content'  bindtap="intoDes" data-pid="{{item.pid}}">
+      <view class='article-content-left'>
+        <text class='article-title'>{{item.title}}</text>
+        <view class='info'>
+          <image class='authorAvatar' src='{{item.authorAvatar}}'></image>
+          <text class='count'>  {{item.authorName}} • </text>
+          <text class='count'>阅读{{item.readCount}} • </text>
+          <text class='count'>喜欢{{item.praiseCount}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="article-img">
+      <image class='avatar' src='{{item.logoUrl}}'></image>
+      <image class='type-icon' wx:if='{{item.type==3}}' src='../../images/audio.png'></image>
+      <image class='type-icon' wx:elif='{{item.type==2}}' src='../../images/video.png'></image>
+    </view>
+  </view>
+</view>

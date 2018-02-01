@@ -1,0 +1,69 @@
+<!--article.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class = 'article'>
+    <text class='article-title auto-break'>{{article.title}}</text>
+    <!--author-->
+      <view class='article-author flex'>
+        <image src='{{article.authorAvatar}}' class='img'>
+        </image>
+        <view class='author-info'>
+         <view class='author-name'>{{article.authorName}}</view>
+          <view class='author-title'>{{article.publishTime}} • {{article.authorTitle}}</view>
+        </view>
+      </view>
+    <!--author-->
+<view class='article-vedio' wx:if='{{article.type===2}}'>
+    <video src='{{vsrc}}' enable-danmu danmu-btn controls></video>
+</view>
+
+<view class='article-audio' wx:if='{{article.type===3}}'>
+    <!--音频测试-->
+    <audio poster="{{article.logoUrl}}"
+    class='audio'
+    name="{{article.authorName}}"
+    id='myAuddio'
+    controls loop
+    >
+    </audio>
+    <!--音频测试-->
+</view>
+
+  <view class='article-content rich-content auto-break'>
+
+  <template is='wxParse' data='{{wxParseData:content.nodes}}' class='auto-break' />
+  
+  </view>
+
+
+  <!--content-->
+
+<!--点赞哈哈哈哈-->
+<praise praiseCount='{{article.praiseCount}}'
+ pid='{{article.pid}}' 
+commentType='{{commentType}}' 
+
+wx:if='{{ask}}'></praise>
+     
+     
+      <!--关联分割线-->
+      <view class='include-isolute' wx:if='{{columnList.length>0}}'>
+          <text class='include-text'>文章被收录到</text>
+    </view>    
+
+    
+  <!--关联专栏微课-->
+
+   <view class='relative-classes flex' wx:for='{{columnList}}' wx:key=''  wx:if='{{item.selected}}'>
+     <view class='relative-title'>
+       <view class='title nowrap-2'>{{item.columnName}}</view>
+       <view class='type'>{{item.columnType==2?'微课 ': '专栏'}} | {{item.articleCount}} {{item.columnType==2?'课时': '更新'}}</view>
+     </view>
+     <image class='img' src='{{item.columnLogoUrl}}'></image>
+   </view>
+ <view class='isolution'></view>
+ <comment targetId="{{article.pid}}" 
+ commentCount='{{article.commentCount}}'
+ targetType="{{commentType}}"
+ wx:if='{{ask}}'
+ ></comment>
+</view>

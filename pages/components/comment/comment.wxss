@@ -1,0 +1,196 @@
+.comment{
+  font-size: 32rpx;
+  padding-bottom: 120rpx;
+}
+.comment-title{
+height: 100rpx;
+line-height: 100rpx;
+padding-left: 30rpx;
+padding-right: 30rpx;
+}
+.title-left{
+  float: left
+}
+.title-right{
+  float: right;
+}
+.comment-list{
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.no-comments{
+  text-align: center;
+  height: 200rpx;
+  line-height: 200rpx;
+}
+.comment-item{
+  display: -webkit-box;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+
+}
+.item-head{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  margin-right: 15rpx;
+}
+.item-content{
+    float:none;
+-webkit-box-flex:1;
+-webkit-flex:1;
+}
+.content-name{
+  color: #406599;
+  font-size: 28rpx;
+}
+.content-comment{
+  font-size: 34rpx;
+  color: #333;
+  margin-top: 20rpx;
+}
+.content-setting{
+  font-size: 24rpx;
+  color: #999;
+   margin-top: 20rpx;
+}
+.setting-time{
+  float: left;
+}
+.setting-delete{
+  float: right;
+}
+.comment-input{
+  display: -webkit-box;
+  padding-left: 30rpx;
+
+  background-color: white;
+  width: 100%;
+
+  padding-top: 10rpx;
+  box-sizing: border-box;
+
+}
+.comment-input-writing{
+  padding-left: 10rpx;
+  height: 250rpx;
+  padding-right: 10rpx;
+
+}
+.comment-input-normal{
+      height: 90rpx;
+        padding-right: 30rpx;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10rpx;
+  padding-left: 30rpx;
+}
+.comment-bottom{
+ position: fixed;
+ width: 100%;
+ background: white;
+   box-sizing: border-box;
+   z-index: 100;
+}
+.comment-bottom-writing{
+  top: 0;
+  height: 100%;
+}
+.comment-bottom-normal{
+  bottom: 0;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+
+.input-icon{
+  width: 45rpx;
+  height: 45rpx;
+  position: relative;
+}
+.input-placeholder{
+  position: absolute;
+  color: #cecece;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+}
+.input{
+ border: 1px solid #ccc;
+ padding-top: 10rpx;
+ border-radius: 32rpx;
+-webkit-box-flex: 1;
+}
+.input-normal {
+   padding-left: 60rpx;
+    height: 54rpx;
+}
+.input-writing{
+    padding-left: 25rpx;
+}
+.auto-break{
+  word-break: break-all;
+}
+.input-writing{
+  padding-left: 25rpx;
+  height: 230rpx;
+}
+.write-icon{
+  position: absolute;
+  left: 40rpx;
+  top: 23rpx;
+}
+.message-icon{
+ margin-left: 30rpx;
+ margin-top: 13rpx;
+}
+.button{
+  width: 110rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 25rpx;
+}
+.button-left{
+  float: left;
+
+}
+.button-right{
+  float: right;
+}
+.message-wrap{
+  box-sizing: border-box;
+  width: 80rpx;
+  position: relative;
+  text-align: center;
+}
+.message-number{
+  background-color: #ff5a5f;
+  color:white;
+  font-size: 18rpx;
+  position: absolute;
+  left: 60rpx;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+
+  text-align: center;
+}
+.comment-button{
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background-color: white
+}
+.button-left{
+  background-color: #ccc;
+  color: #333;
+}
+.button-right{
+  background-color: #cecece;
+  color: white;
+}

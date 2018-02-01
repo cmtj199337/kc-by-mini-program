@@ -1,0 +1,126 @@
+.banner {width: 100%;height: 380rpx;display: block;}
+.nav{height:88rpx;display:flex;flex-direction:row;border-bottom: 1px solid #e5e5e5;}
+.default{line-height:88rpx;text-align:center;flex:1;font-size:32rpx;color:#666;}
+.default text {
+  width: 200rpx;
+  height: 88rpx;
+  display: block;
+  margin: 0 auto;
+}
+.red{line-height:88rpx;text-align:center;color:#ff5a5f;flex:1;font-size:32rpx;}
+.red text {
+  width: 180rpx;
+  height: 88rpx;
+  display: block;
+  margin: 0 auto;
+  border-bottom: 1px solid #ff5a5f;
+}
+.show{
+  display:block;
+  box-sizing: border-box;
+}
+.hidden{display:none}
+.art-list {
+  height: 130rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  position: relative;
+  display: -webkit-box;
+  padding: 0rpx 30rpx;
+}
+.art-list:last-child {
+  border-bottom: 0;
+} 
+.art-list image {
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+}
+.contain {
+  width: 75%;
+  padding-left: 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+}
+.live-list {
+  font-size: 32rpx;
+  color: #333;
+}
+.sup-info {
+  position: absolute;
+  top: 45rpx;
+  left: 20rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.wxParse-p {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 54rpx;
+  padding:0 30rpx 20rpx 30rpx;
+}
+.wxParse-p:first-child {
+  margin-top: 30rpx; 
+}
+.current {
+  color: #ff5a5f;
+}
+.title {
+  display: block;
+  font-size: 36rpx;
+  color: #333;
+  padding: 30rpx 30rpx 0 30rpx;
+  margin-top: 20rpx;
+}
+.author-info {
+  padding: 36rpx 30rpx;
+  display: -webkit-box;
+}
+.info {
+  padding-left: 20rpx;
+}
+.authorAvatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.authorName {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 400;
+  display: block;
+}
+.authorTitle {
+  font-size: 24rpx;
+  color: #999;
+  display: block;
+  padding-top: 8rpx;
+}
+.btn {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #fff;
+  position: absolute;
+  top: 45rpx;
+  right: 30rpx;
+  background: #ff5a5f;
+  border-radius: 8rpx;
+  border: none;
+  padding: 0 14rpx;
+  -webkit-appearance: none;
+}
+.pay {
+  height: 98rpx;
+  line-height: 98rpx;
+  width: 100%;
+  -webkit-appearance: none;
+  border: none;
+  background: #ff5a5f;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  border-radius: 0;
+}

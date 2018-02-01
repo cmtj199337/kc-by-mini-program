@@ -1,0 +1,45 @@
+{
+  "pages": [
+  
+    "pages/home/home",
+  "pages/article/article",
+    "pages/live/liveback/liveback",
+    "pages/live/livelist/livelist",
+    "pages/live/livedetail/livedetail",
+    "pages/series/serieslist/serieslist",
+    "pages/series/seriesdetail/seriesdetail",
+    "pages/activity/activitylist/activitylist",
+    "pages/activity/activitymember/activitymember",
+    "pages/activity/activitydetail/activitydetail",
+    "pages/activity/activitytake/activitytake",
+    "pages/web-view/h5live/h5live",
+    "pages/my/my",
+    "pages/myinfo/myinfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "咖场",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home1.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/my1.png",
+        "selectedIconPath": "images/my.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

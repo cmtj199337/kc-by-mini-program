@@ -1,0 +1,68 @@
+/**my.wxss**/
+.wrap {
+  background: #f4f4f4;
+  height: 100%;
+}
+.info {
+  padding: 50rpx 30rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.avator-left {
+  display: -webkit-box;
+}
+.avator-left image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.nick-name {
+  font-size: 32rpx;
+  color: #333;
+  display: block;
+}
+.profile {
+  font-size: 24rpx;
+  color: #999;
+  display: block;
+}
+.title {
+  line-height: 64rpx;
+  margin-left: 20rpx;
+}
+.avator-right {
+  line-height: 130rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.profile-list {
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding: 0 30rpx;
+  position: relative;
+}
+.profile-list:last-child {
+  border-bottom: none;
+}
+.item-icon {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.item-title {
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 30rpx;
+}
+.arrows {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}

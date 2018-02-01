@@ -1,0 +1,36 @@
+<!--pages/activity/activitydetail/activitydetail.wxml-->
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class='activitydetail'>
+  <image class='activitydetail-logo' src='{{detail.logoUrl}}'></image>
+  <view class='activitydetail-title auto-break'>{{detail.title}}</view>
+  <view class='info-time activitydetail-info'>
+   <image src='../../../images/ac-time.png' class='info-icon'></image>
+  {{startTimeText}} 至 {{endTimeText}}</view>
+  <view class='info-place activitydetail-info auto-break'>
+  <image src='../../../images/ac-position.png' class='info-icon'></image>
+  {{detail.address}}</view>
+  <view class='info-take activitydetail-info'>
+   <image src='../../../images/ac-people.png' class='info-icon'></image>
+  已报名{{detail.paidCount}}人 / {{detail.attendeeNum==0 ? '不限名额': detail.attendeeNum }}</view>
+  <view class='info-price activitydetail-info'>
+   <image src='../../../images/ac-price.png' class='info-icon'></image>
+  {{detail.price}}</view>
+  <view class='info-host activitydetail-info'>
+   <image src='../../../images/ac-host.png' class='info-icon'></image>
+  {{detail.host}}</view>
+  <view class='isolution'></view>
+  <view class='activitydetail-content rich-content'>
+    <template is='wxParse' data='{{wxParseData:content.nodes}}' />
+  </view>
+    <view class='isolution'></view>
+  <view class='activity-take clearfix'>
+      <view class='take-num fl'>已报名({{detail.paidCount}})</view>
+      <view class='take-tag fr' data-pid='{{detail.pid}}' bindtap='moreTakers'>更多></view>
+  </view>
+  <view class='number-row'>
+        <image class='number-img' wx:for='{{members}}' wx:key='' src='{{item.avatar}}'></image>
+  </view>
+
+  <view class=' {{bTake !== 3 || btnText !== "立即报名"? "bg-grey1" : "bg-red1"}}     activitydetail-btn' data-pid='{{detail.pid}}' bindtap='takeInto'>{{btnText}}</view>
+</view>
+

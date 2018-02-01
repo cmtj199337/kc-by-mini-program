@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "praise": "../components/praise/praise",
+    "comment": "../components/comment/comment"
+  }
+}

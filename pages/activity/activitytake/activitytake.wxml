@@ -1,0 +1,61 @@
+<view class='activitytake'>
+  <view class='activitytake-title'>
+  报名资料
+  </view>
+  <view class='activity-info auto-break'>
+  {{detail.title}}</view>
+ <form class='activity-form'>
+ <view class='form-info'>联系人信息</view>
+  <view class='section clearfix'>
+    <text class='section-title' >姓名*</text>
+    <input placeholder='必填' class='input' value='{{formData.fullName}}'></input>
+  </view>
+    <view class='section clearfix'>
+    <text class='section-title'>职位</text>
+    <input placeholder='可选' class='input' value='{{formData.position}}'></input>
+  </view>
+    <view class='section clearfix'>
+    <text class='section-title' type='number'>电话*</text>
+    <input placeholder='必填' class='input' value='{{formData.mobile}}'></input>
+  </view>
+  
+    <view class='section clearfix'>
+    <text class='section-title'>邮箱</text>
+    <input placeholder='可选' class='input' value='{{formData.email}}'></input>
+  </view>
+  <view class='form-info'>公司信息</view>
+
+      <view class='section clearfix'>
+        <text class='section-title'>公司名字</text>
+        <input placeholder='可选' 
+        value='{{formData.company}}'
+        class='input'></input>
+      </view>
+
+        <view class='section clearfix'>
+         <text class='section-title'>所属行业</text>
+          <input placeholder='可选' 
+          value='{{formData.industryName}}'
+          class='input'></input>
+        </view>
+
+
+        <view class='section clearfix'>
+          <text class='section-title'>在职人数</text>
+          <input placeholder='可选'
+          type='number'
+          value='{{formData.employeeNum}}'
+          class='input'></input>
+        </view>
+
+    <view class='section clearfix'>
+      <text class='section-title'>其他</text>
+      <input placeholder='可选'class='input' value='{{formData.remark }}'></input>
+    </view>
+
+    <view class='take-btn clearfix'>
+    <text class='take-price red1'>合计：{{detail.price > 0 ? '￥'  + detail.price : '免费'}}</text> 
+      <view  class='take-submit' bindtap='next'data-pid='{{detail.pid}}'>下一步</view>
+    </view>
+ </form>
+</view>

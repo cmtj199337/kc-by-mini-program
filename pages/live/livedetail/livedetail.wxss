@@ -1,0 +1,103 @@
+.wrap {
+  padding-bottom: 120rpx;
+}
+.image-area {
+  position: relative;
+  height: 380rpx;
+}
+.image-area image {
+  width: 100%;
+  height: 100%;
+}
+.status {
+  width: 200rpx;
+  height: 74rpx;
+  text-align: center;
+  line-height: 74rpx;
+  font-size: 32rpx;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -32rpx;
+  margin-left: -100rpx; 
+  display: inline-block;
+  background: rgba(0,0,0,.8);
+  border-radius: 50rpx;
+}
+.time {
+  width: 400rpx;
+  margin-left: -200rpx; 
+}
+.title-info {
+  padding: 0 30rpx 20rpx 0;
+}
+.title {
+  font-size: 36rpx;
+  display: block;
+  padding: 30rpx 30rpx 0 30rpx;
+  line-height: 60rpx;
+  color: #333;
+}
+.start-time {
+  font-size: 30rpx;
+  color: #999;
+  margin: 20rpx 0 0 30rpx;
+}
+.take-number {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 30rpx;
+}
+.take-number image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.take-number text{
+  font-size: 30rpx;
+  color: #999;
+}
+.live-price {
+  height: 90rpx;
+  line-height: 90rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  color: #999;
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 20rpx solid #f4f4f4;
+}
+.text-red {
+  color: #ff5a5f;
+}
+.text-green {
+  color: #2cc17b;
+}
+.content {
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+.btn {
+  width: 100%;
+  height: 108rpx;
+  line-height: 108rpx;
+  position: fixed;
+  bottom: 0;
+  background: #ff5a5f;
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 0;
+}
+.wxParse-p {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 54rpx;
+  padding-bottom: 20rpx;
+}
+.wxParse-div {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 54rpx;
+  padding-bottom: 20rpx;
+}

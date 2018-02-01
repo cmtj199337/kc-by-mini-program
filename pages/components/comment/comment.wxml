@@ -1,0 +1,61 @@
+<view class='comment'>
+
+
+
+  <view class='comment-title clearfix'>
+      <text class='title-left'>评论</text>
+      <text class='title-right' wx:if='{{cssType===1}}'>我要评论</text>
+  </view>
+
+  <view class='no-comments' wx:if='{{commentList.length == 0}}'>
+  {{commentsDefault}}
+  </view>
+  <view class='comment-list'bindtouchmove='touchmove'>
+
+     <view class='comment-item flex' wx:for="{{commentList}}" wx:key="">
+
+        <image class='item-head' src='{{item.creatorAvatar}}'>
+        </image>
+
+     <view class='item-content'>
+        <view class='content-name'>{{item.creatorName}}</view>
+        <view class='content-comment auto-break'>{{item.content}}</view>
+       <view class='content-setting clearfix'>
+          <text class='setting-time'>{{item.createTime}}</text>
+          <text class='setting-delete' 
+          data-pid='{{item.pid}}'
+          bindtap='deleteComment'
+          wx:if = '{{user.userId === item.creator}}'
+          data-index='{{index}}'>删除</text>
+       </view>
+     </view>
+     </view>
+  </view>
+
+  <view class=' {{writingFlag  ? "comment-bottom-writing" : "comment-bottom-normal"}} comment-bottom'>
+
+  <view class='{{writingFlag ? "comment-input-writing":"comment-input-normal"}} comment-input'>
+
+    <image class='input-icon write-icon' src='../../../images/comment-writing.png' wx:if='{{!writingFlag}}'></image>
+    <text class='input-placeholder' wx:if='{{!writingFlag && !comments}}'  bindtap='writeComment' >写评论...</text>
+      <textarea 
+      class='{{writingFlag ? "input-writing" : "input-normal"}} input'
+      bindfocus='writeComment' 
+      value='{{comments}}'
+      bindinput='writingInput'
+  ></textarea>
+
+    <view class='message-wrap' wx:if='{{!writingFlag}}'> 
+      <image class='input-icon message-icon' src='../../../images/comment-icon.png'>
+      </image>
+      <text class='message-number'>{{commentCount}}</text>
+    </view>
+
+
+    </view>
+    <view class='comment-button clearfix' wx:if='{{writingFlag}}'>
+      <button  class='button fl button-left' bindtap='outWriting'>取消</button>
+      <button  class='button fr button-right' bindtap='putComment'>确定</button>
+    </view>
+  </view>
+</view>

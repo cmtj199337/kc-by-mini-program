@@ -1,0 +1,37 @@
+<!--my.wxml-->
+<view class="wrap">
+  <view class='info'>
+    <view class='avator-left'>
+      <view>
+        <image src="{{info.avatarUrl}}"></image>
+      </view>
+      <view class='title'>
+        <text class='nick-name'>{{info.nickName||'未知'}}</text>
+        <text class='profile'>还没有简介</text>
+      </view>
+      <!-- <view class='avator-right'>
+        普通会员
+      </view> -->
+    </view>
+  </view>
+  <view class='profile-list' bindtap='toAddress' data-url='../myinfo/myinfo'>
+    <image class='item-icon' src='../../images/my-myinfo.png'></image>
+    <text class='item-title'>我的信息</text>
+    <image class='arrows' src='../../images/arrows_right.png'></image>
+  </view>
+  <view class='profile-list'>
+    <image class='item-icon' src='../../images/my-buy.png'></image>
+    <text class='item-title'>我的电子票</text>
+    <image class='arrows' src='../../images/arrows_right.png'></image>
+  </view>
+  <view class='profile-list'>
+    <image class='item-icon' src='../../images/history-pic.png'></image>
+    <text class='item-title'>学习历史</text>
+    <image class='arrows' src='../../images/arrows_right.png'></image>
+  </view>
+  <view class='profile-list'>
+    <image class='item-icon' src='../../images/my-buy.png'></image>
+    <text class='item-title'>我的购买</text>
+    <image class='arrows' src='../../images/arrows_right.png'></image>
+  </view>
+</view>

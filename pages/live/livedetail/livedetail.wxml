@@ -1,0 +1,30 @@
+<!--  直播详情  -->
+<!-- <wxs module="filters" src="../../../utils/filters.wxs"></wxs> -->
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class='wrap'>
+  <view class='image-area'>
+    <image src="{{info.logoUrl}}"></image>
+    <text class='status' wx:if="{{info.status == 2}}">正在直播</text>
+    <text class='status time' wx:elif="{{info.status == 1}}">{{info.startTimeText}}开始</text>
+    <text class='status' wx:else="{{info.status == 3}}">往期回看</text>
+  </view>
+  <view class='title-info'>
+    <text class='title'>{{info.name}}</text>
+    <text class='start-time'>时间 {{info.startTimeYear}}</text>
+    <view class='take-number'>
+      <image src='../../../images/people2.png'></image>
+      <text> {{info.subscribeCount}}人参与</text>
+    </view>
+  </view>
+  <view class='live-price'>
+    <text>票价 </text>
+    <text class='text-red' wx:if='{{info.price > 0}}'>{{info.price}}</text> 
+    <text class='text-green' wx:else>免费</text> 
+  </view>
+  <view class='content'>
+    <template is='wxParse' data='{{wxParseData:content.nodes}}' />
+  </view>
+   <button class='btn' disabled="{{!btnCss}}" wx:if="{{ask}}" bindtap='pay'>
+    <text>{{btnText}}</text>
+  </button> 
+</view>
